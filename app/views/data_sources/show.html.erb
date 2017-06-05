@@ -1,0 +1,42 @@
+<p>
+  <strong>Name:</strong>
+  <%= @data_source.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @data_source.desc %>
+</p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @data_source.startdate %>
+</p>
+
+<p>
+  <strong>Stil active:</strong>
+  <%= @data_source.stil_active %>
+</p>
+
+<p>
+  <strong>Source root url:</strong>
+  <%= @data_source.source_root_url %>
+</p>
+
+<p>
+  <strong>License:</strong>
+  <%= @data_source.license %>
+</p>
+
+<p><strong>Sensor Stations:</strong><br>
+<div style="padding-left: 2em;">
+  
+<% @data_source.sensor_stations.each do |sensor_station| %>
+  <%= sensor_station.name %><br>
+<% end %>
+</div>
+</p>
+
+
+<%= link_to 'Edit', edit_data_source_path(@data_source) %> |
+<%= link_to 'Back', data_sources_path %>

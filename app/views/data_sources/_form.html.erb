@@ -1,0 +1,25 @@
+<%= simple_form_for(@data_source, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :desc %>
+    <%= f.input :startdate, :start_year => Date.today.year - 200, :end_year => Date.today.year %>
+    <%= f.input :stil_active %>
+    <%= f.input :license %>
+    <%= f.input :source_root_url %>
+
+    <%= f.input :sensor_station_ids, collection: SensorStation.all, input_html: { class: 'multipleSelect', multiple: true} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+
+
+<%= javascript_include_tag "jquery-multi-select" %>
+<script type="text/javascript">
+  $('.multipleSelect').multiSelect()
+</script>

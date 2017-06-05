@@ -1,0 +1,22 @@
+<%= simple_form_for(@sensor_station) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :desc %>
+    <%= f.input :lat %>
+    <%= f.input :lng %>
+
+    <%= f.input :sensor_ids, collection: Sensor.all, input_html: { class: 'multipleSelect', multiple: true} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+
+<%= javascript_include_tag "jquery-multi-select" %>
+<script type="text/javascript">
+  $('.multipleSelect').multiSelect()
+</script>

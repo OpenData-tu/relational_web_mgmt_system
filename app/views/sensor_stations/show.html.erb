@@ -1,0 +1,31 @@
+<p>
+  <strong>Name:</strong>
+  <%= @sensor_station.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @sensor_station.desc %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @sensor_station.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @sensor_station.lng %>
+</p>
+
+<p><strong>Sensors:</strong><br>
+<div style="padding-left: 2em;">
+  
+<% @sensor_station.sensors.each do |sensor| %>
+  <%= sensor.name %><br>
+<% end %>
+</div>
+</p>
+
+<%= link_to 'Edit', edit_sensor_station_path(@sensor_station) %> |
+<%= link_to 'Back', sensor_stations_path %>

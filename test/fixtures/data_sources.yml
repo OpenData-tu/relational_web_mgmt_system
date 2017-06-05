@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stil_active: 
+  source_root_url: MyString
+  startdate: 2017-06-02 11:42:11
+  name: MyString
+  desc: MyString
+  license: MyString
+
+two:
+  stil_active: 
+  source_root_url: MyString
+  startdate: 2017-06-02 11:42:11
+  name: MyString
+  desc: MyString
+  license: MyString

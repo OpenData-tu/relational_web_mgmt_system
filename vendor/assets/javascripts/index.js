@@ -1,0 +1,1 @@
+//= require jquery-multi-select
