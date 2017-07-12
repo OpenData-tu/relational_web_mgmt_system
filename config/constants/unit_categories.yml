@@ -1,0 +1,54 @@
+humidity:
+  id: humidity
+  name: Humidity
+temperature:
+  id: temperature
+  name: Temperature
+pressure:
+  id: pressure
+  name: Pressure
+illuminance:
+  id: illuminance
+  name: Illuminance
+radioactivity:
+  id: radioactivity
+  name: Radioactivity
+velocity:
+  id: velocity
+  name: Velocity
+time:
+  id: time
+  name: Time
+length:
+  id: length
+  name: Length
+mass:
+  id: mass
+  name: Mass
+energy:
+  id: energy
+  name: Energy
+area:
+  id: area
+  name: Area
+frequency:
+  id: frequency
+  name: Frequency
+loudness:
+  id: loudness
+  name: Loudness
+force:
+  id: force
+  name: Force
+volume:
+  id: volume
+  name: Volume
+percentage:
+  id: percentage
+  name: Percentage
+parts_per_volume:
+  id: parts_per_volume
+  name: 'Parts per Volume'
+height:
+  id: height
+  name: Height

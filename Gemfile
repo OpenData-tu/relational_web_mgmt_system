@@ -30,6 +30,10 @@ gem 'simple_form'
 gem 'devise'
 gem 'cancancan', '~> 1.10'
 
+# gem 'sidekiq'
+
+gem 'active_hash'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

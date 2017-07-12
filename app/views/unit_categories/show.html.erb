@@ -1,0 +1,23 @@
+<h2><%= @unit_category.name %></h2>
+
+<h3>Units</h3>
+	<div style="padding-left: 2em;">
+		<% if @unit_category.units %>
+			<% @unit_category.units.each do |unit| %>
+				<h4><%= unit.name %></h4>
+				<ul>
+					<li>
+						<strong>Unit Symbol:</strong> <%= unit.unit_symbol %>
+					</li>
+					<li>
+						<strong>Notation:</strong> 
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<mrow> <%= raw unit.notation %>
+							</mrow>
+						</math>
+					</li>
+				</ul>
+			<% end %>
+		<% end %>
+	</div>
+</p>

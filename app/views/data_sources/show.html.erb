@@ -28,11 +28,11 @@
   <%= @data_source.license %>
 </p>
 
-<p><strong>Sensor Stations:</strong><br>
+<p><strong>Measurements:</strong><br>
 <div style="padding-left: 2em;">
   
-<% @data_source.sensor_stations.each do |sensor_station| %>
-  <%= sensor_station.name %><br>
+<% @data_source.measurements.each do |measurement| %>
+  <%= link_to measurement.name, measurement %><br>
 <% end %>
 </div>
 </p>

@@ -1,0 +1,24 @@
+<h1>Listing Unit Categories</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% categories = @unit_categories.sort { |a,b| a.name.downcase <=> b.name.downcase } %>
+    <% categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= link_to 'Show', category %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New unit_category', new_unit_category_path %>

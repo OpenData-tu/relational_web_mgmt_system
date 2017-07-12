@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
+  resources :measurements
   resources :sensor_stations
   resources :sensors
   resources :data_sources
+  resources :unit_categories
+  resources :units
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'data_sources#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -17,9 +17,12 @@
         <a class="navbar-brand" href="/">CP Open Data Web mgmt</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
 		<ul class="nav navbar-nav">
-			<li><%= link_to '<i class="fa fa-list"></i> Data Sources'.html_safe, data_sources_path %></li>
-      <li><%= link_to '<i class="fa fa-home"></i> Sensor Stations'.html_safe, sensor_stations_path %></li>
-			<li><%= link_to '<i class="fa fa-eye"></i> Sensors'.html_safe, sensors_path %></li>
+      <li><%= link_to '<i class="fa fa-list"></i> Data Sources'.html_safe, data_sources_path %></li>
+			<li><%= link_to '<i class="fa fa-eye"></i> Measurements'.html_safe, measurements_path %></li>
+      <li><%= link_to 'Units'.html_safe, units_path %></li>
+      <li><%= link_to 'Unit Categories'.html_safe, unit_categories_path %></li>
+      <li><%= link_to '<i class="fa fa-map-marker"></i> Sensor Stations'.html_safe, sensor_stations_path %></li>
+      <li><%= link_to '<i class="fa fa-eye"></i> Sensors'.html_safe, sensors_path %></li>
 		</ul>
 
     </div>

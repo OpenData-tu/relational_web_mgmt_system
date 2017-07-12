@@ -8,8 +8,10 @@
     <%= f.input :stil_active %>
     <%= f.input :license %>
     <%= f.input :source_root_url %>
+    <%= f.input :docker_image_location %>
+    <%= f.input :schedule_cron %>
 
-    <%= f.input :sensor_station_ids, collection: SensorStation.all, input_html: { class: 'multipleSelect', multiple: true} %>
+    <%= f.input :measurement_ids, collection: Measurement.all, input_html: { class: 'multipleSelect', multiple: true} %>
   </div>
 
   <div class="form-actions">

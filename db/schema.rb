@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170605150802) do
+ActiveRecord::Schema.define(version: 20170712171312) do
 
   create_table "data_sources", force: :cascade do |t|
     t.boolean  "stil_active"
@@ -20,8 +20,18 @@ ActiveRecord::Schema.define(version: 20170605150802) do
     t.string   "name"
     t.string   "desc"
     t.string   "license"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "docker_image_location"
+    t.string   "schedule_cron"
+    t.string   "slug"
+  end
+
+  create_table "data_sources_measurements", force: :cascade do |t|
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "data_source_id"
+    t.integer  "measurement_id"
   end
 
   create_table "data_sources_sensor_stations", id: false, force: :cascade do |t|
@@ -31,6 +41,14 @@ ActiveRecord::Schema.define(version: 20170605150802) do
 
   add_index "data_sources_sensor_stations", ["data_source_id"], name: "index_data_sources_sensor_stations_on_data_source_id"
   add_index "data_sources_sensor_stations", ["sensor_station_id"], name: "index_data_sources_sensor_stations_on_sensor_station_id"
+
+  create_table "measurements", force: :cascade do |t|
+    t.string   "name"
+    t.string   "desc"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "unit_category_id"
+  end
 
   create_table "sensor_stations", force: :cascade do |t|
     t.string   "name"

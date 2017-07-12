@@ -1,0 +1,304 @@
+pascal:
+  id: pressure_pascal
+  name: "pascal"
+  unit_symbol: "pa"
+  unit_category_id: pressure
+  notation: "1 <centerdot>
+              <mfrac>
+                <mrow>
+                  kg
+                </mrow>
+                <mrow>
+                  m 
+                  <msup>
+                          <mi>s</mi>
+                          <mn>2</mn>
+                </mrow>
+              </mfrac>"
+bar:
+  id: pressure_bar
+  name: "bar"
+  unit_symbol: "bar"
+  unit_category_id: pressure
+  notation: "<msup><mi>10</mi><mn>15</mn></msup>
+              <mfrac>
+                <mrow>
+                  kg
+                </mrow>
+                <mrow>
+                  m 
+                  <msup>
+                          <mi>s</mi>
+                          <mn>2</mn>
+                </mrow>
+              </mfrac>"
+celsius:
+  id: temperature_celsius
+  name: "celsius"
+  unit_symbol: "°C"
+  unit_category_id: temperature
+  notation: ""
+fahrenheit:
+  id: temperature_fahrenheit
+  name: "fahrenheit"
+  unit_symbol: "°F"
+  unit_category_id: temperature
+  notation: ""
+kelvin:
+  id: temperature_kelvin
+  name: "kelvin"
+  unit_symbol: "K"
+  unit_category_id: temperature
+  notation: ""
+microsecond:
+  id: time_microsecond
+  name: "microsecond"
+  unit_symbol: "µs"
+  unit_category_id: time
+  notation: ""
+milisecond:
+  id: time_milisecond
+  name: "milisecond"
+  unit_symbol: "ms"
+  unit_category_id: time
+  notation: ""
+second:
+  id: time_second
+  name: "second"
+  unit_symbol: "s"
+  unit_category_id: time
+  notation: ""
+minute:
+  id: time_minute
+  name: "minute"
+  unit_symbol: "m"
+  unit_category_id: time
+  notation: ""
+hour:
+  id: time_hour
+  name: "hour"
+  unit_symbol: "h"
+  unit_category_id: time
+  notation: ""
+day:
+  id: time_day
+  name: "day"
+  unit_symbol: "d"
+  unit_category_id: time
+  notation: ""
+month:
+  id: time_month
+  name: "month"
+  unit_symbol: "m"
+  unit_category_id: time
+  notation: ""
+year:
+  id: time_year
+  name: "year"
+  unit_symbol: "y"
+  unit_category_id: time
+  notation: ""
+meter:
+  id: length_meter
+  name: "meter"
+  unit_symbol: "m"
+  unit_category_id: length
+  notation: ""
+centimeter:
+  id: length_centimeter
+  name: "centimeter"
+  unit_symbol: "cm"
+  unit_category_id: length
+  notation: ""
+milimeter:
+  id: length_milimeter
+  name: "milimeter"
+  unit_symbol: "mm"
+  unit_category_id: length
+  notation: ""
+kilometer:
+  id: length_kilometer
+  name: "kilometer"
+  unit_symbol: "km"
+  unit_category_id: length
+  notation: ""
+inch:
+  id: length_inch
+  name: "inch"
+  unit_symbol: "in"
+  unit_category_id: length
+  notation: ""
+foot:
+  id: length_foot
+  name: "foot"
+  unit_symbol: "f"
+  unit_category_id: length
+  notation: ""
+yard:
+  id: length_yard
+  name: "yard"
+  unit_symbol: "y"
+  unit_category_id: length
+  notation: ""
+mile:
+  id: length_mile
+  name: "mile"
+  unit_symbol: "m"
+  unit_category_id: length
+  notation: ""
+lightyear:
+  id: length_lightyear
+  name: "lightyear"
+  unit_symbol: "lightyears"
+  unit_category_id: length
+  notation: ""
+gram:
+  id: mass_gram
+  name: "gram"
+  unit_symbol: "g"
+  unit_category_id: mass
+  notation: ""
+kilo_gram:
+  id: mass_kilo_gram
+  name: "kilo_gram"
+  unit_symbol: "kg"
+  unit_category_id: mass
+  notation: ""
+mili_gram:
+  id: mass_mili_gram
+  name: "mili_gram"
+  unit_symbol: "kg"
+  unit_category_id: mass
+  notation: ""
+ton:
+  id: mass_ton
+  name: "ton"
+  unit_symbol: "t"
+  unit_category_id: mass
+  notation: ""
+pound:
+  id: mass_pound
+  name: "pound"
+  unit_symbol: "oz"
+  unit_category_id: mass
+  notation: ""
+ounce:
+  id: mass_ounce
+  name: "ounce"
+  unit_symbol: "dr"
+  unit_category_id: mass
+  notation: ""
+square_meter:
+  id: area_square_meter
+  name: "Squaremeter"
+  unit_symbol: "m^2"
+  unit_category_id: area
+  notation: "<msup><mi>m</mi><mn>2</mn>"
+square_milimeter:
+  id: area_square_milimeter
+  name: "Squaremilimeter"
+  unit_symbol: "mm^2"
+  unit_category_id: area
+  notation: ""
+square_centimeter:
+  id: area_square_centimeter
+  name: "Squarecentimeter"
+  unit_symbol: "cm^2"
+  unit_category_id: area
+  notation: "<msup><mi>10</mi><mn>-4</mn></msup> * <msup><mi>m</mi><mn>2</mn>"
+ar:
+  id: area_ar
+  name: "Ar"
+  unit_symbol: "a"
+  unit_category_id: area
+  notation: "100 <msup><mi>m</mi><mn>2</mn>"
+hektar:
+  id: area_hektar
+  name: "Hektar"
+  unit_symbol: "ha"
+  unit_category_id: area
+  notation: "10000 <msup><mi>m</mi><mn>2</mn>"
+square_kilometer:
+  id: area_square_kilometer
+  name: "Square Kilometer"
+  unit_symbol: "ha"
+  unit_category_id: area
+  notation: "<msup><mi>10</mi><mn>6</mn></msup> * <msup><mi>m</mi><mn>2</mn>"
+energy_joule:
+  id: energy_joule
+  name: "Joule"
+  unit_symbol: "J"
+  unit_category_id: energy
+  notation: ""
+energy_electronvolt:
+  id: energy_electronvolt
+  name: "Electronvolt"
+  unit_symbol: "eV"
+  unit_category_id: energy
+  notation: ""
+energy_calorie:
+  id: energy_calorie
+  name: "Calorie"
+  unit_symbol: "cal"
+  unit_category_id: energy
+  notation: ""
+force_newton:
+  id: force_newton
+  name: "Newton"
+  unit_symbol: "N"
+  unit_category_id: force
+  notation: "kg m <msup><mi> s</mi><mn>-2</mn></msup>"
+frequency_hertz:
+  id: frequency_hertz
+  name: "Hertz"
+  unit_symbol: "Hz"
+  unit_category_id: frequency
+  notation: ""
+humidity_percent:
+  id: humidity_percent
+  name: "Humidity"
+  unit_symbol: "%"
+  unit_category_id: humidity
+  notation: ""
+illuminance_lux:
+  id: illuminance_lux
+  name: "Lux"
+  unit_symbol: "lx"
+  unit_category_id: illuminance
+  notation: "1 <mfrac>                <mrow>                  lm                </mrow>                <mrow>                  <msup>                          <mi>m</mi>                          <mn>2</mn>                </mrow>              </mfrac>"
+loudness_decibel:
+  id: loudness_decibel
+  name: "Decibel"
+  unit_symbol: "dB"
+  unit_category_id: loudness
+  notation: ""
+loudness_phon:
+  id: loudness_phon
+  name: "Phon"
+  unit_symbol: "phon"
+  unit_category_id: loudness
+  notation: ""
+parts_per_volume_cubic_meter:
+  id: parts_per_volume_cubic_meter
+  name: "Parts per Cubicmeter"
+  unit_symbol: ""
+  unit_category_id: parts_per_volume
+  notation: ""
+radioactivity_becquerel:
+  id: radioactivity_becquerel
+  name: "Becquerel"
+  unit_symbol: "Bq"
+  unit_category_id: radioactivity
+  notation: ""
+velocity_meter_per_second:
+  id: velocity_meter_per_second
+  name: "Meter per second"
+  unit_symbol: "m/s"
+  unit_category_id: velocity
+  notation: "m * <msup><mi> s</mi><mn>-1</mn></msup>"
+height_meter:
+  id: height_meter
+  name: "height"
+  unit_symbol: "m"
+  unit_category_id: height
+  notation: ""
