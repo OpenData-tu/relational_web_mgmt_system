@@ -10,4 +10,11 @@ class UnitCategory < ActiveYaml::Base
     has_many :measurements
 
 	enum_accessor :name	
+
+	def get_main_unit
+		if self.units.length > 0
+			return self.units.first
+		end
+		return false
+	end
 end

@@ -34,6 +34,8 @@ gem 'cancancan', '~> 1.10'
 
 gem 'active_hash'
 
+gem 'i18n', '~> 0.7'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

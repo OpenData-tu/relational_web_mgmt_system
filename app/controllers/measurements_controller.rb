@@ -1,5 +1,9 @@
 class MeasurementsController < ApplicationController
-  before_action :set_measurement, only: [:show, :edit, :update, :destroy]
+  before_action :set_measurement, only: [:show, :edit, :update, :destroy, :get_data_sources]
+
+  def get_data_sources
+    render json: @measurement.data_sources
+  end
 
   # GET /measurements
   # GET /measurements.json

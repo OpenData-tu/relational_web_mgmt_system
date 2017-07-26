@@ -1,8 +1,12 @@
 class DataSourcesController < ApplicationController
-  before_action :set_data_source, only: [:show, :edit, :update, :destroy]
+  before_action :set_data_source, only: [:show, :edit, :update, :destroy, :json_schema, :get_measurements]
 
   # GET /data_sources
   # GET /data_sources.json
+  def get_measurements
+    render json: @data_source.measurements
+  end
+
   def index
     @data_sources = DataSource.all
   end
@@ -61,6 +65,55 @@ class DataSourcesController < ApplicationController
     end
   end
 
+  def json_schema
+    schema = {
+      "$schema": "http://json-schema.org/schema#",
+      "title": "Data Source",
+      "description": "A Data Source for Open Sensor Data from the CP project at TU Berlin. ",
+      "type": "object",
+      "properties": {
+        "source_id": {"const": @data_source.slug},
+        "device": {"type": "string"},
+        "timestamp": { "type": "string", "format": "date-time" },
+        "timestamp_data": { "type": "string", "format": "date-time" },
+        "location": {
+          "type": "object",
+          "properties": {
+            "lat": {"type": "number",
+                    "exclusiveMaximum": true,
+                    "exclusiveMinimum": true,
+                    "maximum": 90,
+                    "minimum": -90
+                   },
+            "lon": {"type": "number",
+                    "exclusiveMaximum": true,
+                    "exclusiveMinimum": true,
+                    "maximum": 180,
+                    "minimum": -180,
+                   }
+          },
+        "required": ["lat", "lon"]
+        },
+        "license": {"type": "string"},
+        "sensors": {
+          "type": "object",
+          "items": [
+          {
+            "type": "object",
+            "properties": {
+              "sensor": {"type": "string"},
+              "observation_type": {"type": "string"},
+              "observation_value": {"type": "number"}
+            }
+          }]
+        }
+      },
+      "required": ["source_id", "timestamp","sensors", "location", "license"]
+  }
+
+  render json: schema
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_data_source
@@ -69,6 +122,6 @@ class DataSourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def data_source_params
-      params.require(:data_source).permit(:stil_active, :source_root_url, :startdate, :name, :desc, :license, :sensor_station_ids => [])
+      params.require(:data_source).permit(:stil_active, :source_root_url, :startdate, :name, :desc, :license, :docker_image_location, :schedule_cron, :slug, :enddate, :measurement_ids => [])
     end
 end

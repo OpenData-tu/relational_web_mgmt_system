@@ -3,8 +3,16 @@
 <h3>Units</h3>
 	<div style="padding-left: 2em;">
 		<% if @unit_category.units %>
+			<% counter = 0  %>
 			<% @unit_category.units.each do |unit| %>
-				<h4><%= unit.name %></h4>
+			<div <% if counter == 0  %> 
+				style="background-color: #dddddd; border-style: solid; border-width: 1px; border-color: #cccccc; border-radius: 5px;"
+			<% end %>
+			>
+				<h4 style="padding-left: 1em;"><%= unit.name %></h4>
+				<% if counter == 0 %>
+					<h5 style="padding-left: 1em;"> Main Unit</h5>
+				<% end %>
 				<ul>
 					<li>
 						<strong>Unit Symbol:</strong> <%= unit.unit_symbol %>
@@ -17,6 +25,8 @@
 						</math>
 					</li>
 				</ul>
+			</div>
+				<% counter += 1 %>
 			<% end %>
 		<% end %>
 	</div>

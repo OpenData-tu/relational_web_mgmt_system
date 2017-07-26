@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'data_sources#index'
 
+  get 'unit_categories/:id/getMainUnit', to: 'unit_categories#get_main_unit', :as => :main_unit, :via => :get
+  get 'unit_categories/:id/units', to: 'unit_categories#get_units', :as => :all_units, :via => :get
+
+  get 'data_sources/:id/measurements', to: 'data_sources#get_measurements', :as => :all_measurements, :via => :get
+  get 'data_sources/:id/getValidationSchema', to: 'data_sources#json_schema', :as => :validation_schema, :via => :get
+  get 'measurements/:id/data_sources', to: 'measurements#get_data_sources', :as => :all_data_sources, :via => :get
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

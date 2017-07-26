@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170712171312) do
+ActiveRecord::Schema.define(version: 20170725133059) do
 
   create_table "data_sources", force: :cascade do |t|
     t.boolean  "stil_active"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20170712171312) do
     t.string   "docker_image_location"
     t.string   "schedule_cron"
     t.string   "slug"
+    t.datetime "enddate"
   end
 
   create_table "data_sources_measurements", force: :cascade do |t|
@@ -33,6 +34,9 @@ ActiveRecord::Schema.define(version: 20170712171312) do
     t.integer  "data_source_id"
     t.integer  "measurement_id"
   end
+
+  add_index "data_sources_measurements", ["data_source_id"], name: "index_data_sources_measurements_on_data_source_id"
+  add_index "data_sources_measurements", ["measurement_id"], name: "index_data_sources_measurements_on_measurement_id"
 
   create_table "data_sources_sensor_stations", id: false, force: :cascade do |t|
     t.integer "data_source_id",    null: false

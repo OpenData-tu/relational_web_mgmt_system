@@ -1,5 +1,5 @@
 class UnitCategoriesController < ApplicationController
-  before_action :set_unit_category, only: [:show, :edit, :update, :destroy]
+  before_action :set_unit_category, only: [:show, :edit, :update, :destroy, :get_main_unit, :get_units]
 
   # GET /unit_categories
   # GET /unit_categories.json
@@ -10,6 +10,26 @@ class UnitCategoriesController < ApplicationController
   # GET /unit_categories/1
   # GET /unit_categories/1.json
   def show
+  end
+
+  def get_main_unit
+    main_unit = @unit_category.get_main_unit
+    if main_unit
+      render :json => {
+        :id => main_unit.id,
+        :name => main_unit.name,
+        :unit_category_id => @unit_category.id,
+        :unit_symbol => main_unit.unit_symbol
+      }
+    else
+      render :json => {
+        :error => "No main unit found. Pleas check if unit category exists."
+      }
+    end
+  end
+
+  def get_units
+    render json: @unit_category.units
   end
 
   # GET /unit_categories/new

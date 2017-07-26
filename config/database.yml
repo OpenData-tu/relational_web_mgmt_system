@@ -10,6 +10,7 @@ default: &default
   timeout: 5000
 
 development:
+
   <<: *default
   database: db/development.sqlite3
 
@@ -21,6 +22,7 @@ test:
   database: db/test.sqlite3
 
 production:
+
   adapter: mysql2
   encoding: utf8
   database: cp_rails
